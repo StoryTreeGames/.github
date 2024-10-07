@@ -44,4 +44,12 @@ A fully open source game engine written in Zig. The idea is to create "from scra
 - [`Mach`](https://machengine.org/)
   - [github](https://github.com/hexops/mach/tree/main)
 - [`Evie Engine`](https://github.com/DanWillans/Evie)
-  - [Let's write an ECS](https://youtube.com/playlist?list=PLMClevbUJi9DsmIuij4RzjJ_kUyrQufEs&si=_NJz-DaHthcH9CI4) 
+  - [Let's write an ECS](https://youtube.com/playlist?list=PLMClevbUJi9DsmIuij4RzjJ_kUyrQufEs&si=_NJz-DaHthcH9CI4)
+- [`fontaine`](https://github.com/ziglibs/fontaine)
+- [`zig-miniaudio`](https://github.com/prime31/zig-miniaudio)
+- [`zig-wav`](https://github.com/dbandstra/zig-wav)
+- [`zua`](https://github.com/squeek502/zua)
+- [`zig-sparse-set`](https://github.com/Srekel/zig-sparse-set)
+- [`zig-vulkan-triangle`](https://github.com/andrewrk/zig-vulkan-triangle)
+
+- [`awesome-zig`](https://github.com/nrdmn/awesome-zig)
