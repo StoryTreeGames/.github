@@ -53,3 +53,4 @@ A fully open source game engine written in Zig. The idea is to create "from scra
 - [`zig-vulkan-triangle`](https://github.com/andrewrk/zig-vulkan-triangle)
 
 - [`awesome-zig`](https://github.com/nrdmn/awesome-zig)
+- [`zig-gamedev`](https://github.com/zig-gamedev/zig-gamedev)
