@@ -2,42 +2,38 @@
   <img src="https://github.com/StoryTreeGames/StoryTreeGames/blob/main/StoryTree_Cropped.png" />
 </div>
 
-A fully open source game engine written in Zig. The idea is to create "from scratch" libraries that can create windows, render with "native" APIs, access system resources, etc...
+A fully open source game engine written in Zig. The idea is to create libraries in pure Zig that can create windows, render with "native" APIs, access system resources, etc...
 
-> Note: This project is currently just a bunch of brainstorming and is only maintained by a single developer. Contributions and ideas are more than welcome. See the [discussions]([https://github.com/StoryTreeGames/StoryTreeGames/issues](https://github.com/orgs/StoryTreeGames/discussions)) section for what is needed, areas that need work, and how to contribute.
+
+**Goals**
+
+- Cross Platform: Windows, Linux, Macos, Web, Android, IOS
+- Use zig libraries that already exist that fit all following goals
+- Minimal `C` dependencies
+- Well maintained
+- Uses Zig's potential
+
+The minimal `C` dependencies goal is to push the game engine away from the current popular C paradigms. Zig is compatible with C, but it can do so much better. If most of the engine and libraries where wrappers around C libraries why not just write the engine in the latest versions of `C++`? The engine may use some light wrappers around libraries like [`Dawn`](https://github.com/zig-gamedev/dawn) to get WebGPU functionality working, using [`zgpu`](https://github.com/zig-gamedev/zig-gamedev/tree/main/libs/zgpu). However, if a pure Zig implementation exists and the only C dependencies are with the `Vulkan`, `DirectX`, and `Metal` APIs then that will be used instead. If no project or library exists that fit the minimal `C` requirement then a new project/library will be created to fit this.
+
+Minimal `C` Exceptions:
+
+- Operating System APIs
+- Implmentation APIs that are in C and are too complex to convert to Zig
+  - ex: [`zgpu`](https://github.com/zig-gamedev/zig-gamedev/tree/main/libs/zgpu)  
+
+> [!NOTE]
+> - This project is currently just a bunch of brainstorming and is only maintained by a single developer.
+> - The core developer is not an expert in Zig and is using this project as a learning tool
+> - Contributions and ideas are more than welcome. See the [discussions]([https://github.com/StoryTreeGames/StoryTreeGames/issues](https://github.com/orgs/StoryTreeGames/discussions)) section for what is needed, areas that need work, and how to contribute.
 
 ## Libraries
-- [ ] Sys: System API access cross platform
-- [ ] Audio: A cross platform library for playing and manipulating audio
-- [ ] Font: A cross platform api for font data
-- [ ] Render: A rendering engine that can render graphics and UI to a cross platform window/frame
-  - Custom or Sourced WebGPU implementation
-- [ ] Engine: Game engine specific structures and systems
-
-### Sys
-
-  - [ ] Windowing
-  - [ ] Sys calls
-  - [ ] IO Events
-  - [ ] Linux, Macos, Windows, Web (WASM), Android, IOS
-        
-### Audio
-
-  - [ ] Reads multiple formats
-  - [ ] Streams data with timestamps and audio information
-        
-### Font
-
-  - [ ] Reads multiple formats
-  - [ ] Supports font fallback
-  - [ ] Agnostic data that can be transformed 
-
-### Engine
-
-  - [ ] Cross Compile
-  - [ ] Entity Component System
-  - [ ] Scripting: Allows for scripting in multiple different languages
-  - [ ] GUI ? (long term)
+- Windowing: All functionality around cross platform windows, window events, and anything related to windows/apps
+- Audio: A cross platform library for playing and manipulating audio
+- Font: A cross platform api for reading font data
+- ECS: Entity component system
+- Render: Rendering api using WebGPU standards that can be used accross Windows, Macos, Linux, Web, Android, and IOS
+- Engine: Combination of all libraries to make a simple and easy to use API to load and manage resources, render entities, and handle events
+- more ...
 
 ## Inspiration
 
